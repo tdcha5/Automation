@@ -1,19 +1,19 @@
 //bring in assertion library
 const assert = require('chai').assert;
-const app = require('../app');
+//require app.js
+const addition = require('../app').addition;
 
 //create a test
 describe('App',function(){
 	//test case for a value and description
-	it('app should return hello', function(){
-		assert.equal(app(), 12);
+	it('app should return the sum', function(){
+		let result = addition();
+		assert.equal(result, 11);
 	});
-})
 
-//create a test - trigger a failure 
-describe('App',function(){
-	//test case for a value and description
-	it('app should return hello', function(){
-		assert.equal(app(), 11);
+	//case to check for a specific type
+	it('app should return integer type', function(){
+		let result = addition();
+		assert.typeOf(result, 'number');
 	});
 })

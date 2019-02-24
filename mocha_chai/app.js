@@ -1,3 +1,5 @@
-module.exports = function(){
-	return 5+6; 
+module.exports = {
+	addition: function(){
+		return 5+6;
+	}
 }
