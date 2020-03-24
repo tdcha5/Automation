@@ -16,4 +16,10 @@ describe('App',function(){
 		let result = addition();
 		assert.typeOf(result, 'number');
 	});
+
+	// case: if number is negavity
+	it('number should be over 0', function(){
+		let result = addition();
+		assert.isBelow(0, -3);
+	});
 })
